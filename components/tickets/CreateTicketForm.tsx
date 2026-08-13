@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { FolderKanban, User, Plus } from "lucide-react";
+import { ArrowLeft, FolderKanban, User, Plus } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { SelectField } from "@/components/ui/SelectField";
 import { DescriptionEditor } from "@/components/tickets/DescriptionEditor";
@@ -50,8 +50,16 @@ export function CreateTicketForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="-m-6 flex min-h-[calc(100vh-4rem)] flex-col">
+    <form onSubmit={handleSubmit} className="-m-6 flex min-h-full flex-col">
       <div className="flex-1 p-6 pb-8">
+        <button
+          type="button"
+          onClick={() => router.push("/tickets")}
+          className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-gray-600 transition hover:text-primary"
+        >
+          <ArrowLeft size={16} />
+          Back to Tickets
+        </button>
         <nav className="mb-2 text-sm text-muted">
           <Link href="/tickets" className="hover:text-primary">
             My Tickets

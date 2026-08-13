@@ -5,7 +5,7 @@ import { Avatar } from "@/components/ui/Avatar";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-10 flex h-16 items-center gap-4 border-b border-border bg-surface px-6">
+    <header className="z-20 flex h-16 shrink-0 items-center gap-4 border-b border-border bg-surface px-6">
       <div className="relative max-w-xl flex-1">
         <Search
           size={16}
